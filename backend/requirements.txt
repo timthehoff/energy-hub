@@ -1,0 +1,3 @@
+fastapi==0.79
+teslapy==2.6
+uvicorn[standard]
