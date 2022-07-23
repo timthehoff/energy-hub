@@ -1,13 +1,17 @@
 import teslapy
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import RedirectResponse
 from starlette import status
 
+from .auth import router as auth_router
+
 app = FastAPI()
+app.include_router(auth_router)
 
 
 @app.get("/")
-async def get_root():
-    return {"Hello": "World"}
+async def redirect_to_docs():
+    return RedirectResponse("/docs")
 
 
 @app.get("/state")
