@@ -6,3 +6,11 @@ class EnergyConfig(PermanentModel):
 
     site_id: int
     site_name: str
+
+
+class VehicleConfig(PermanentModel):
+    _path = "/data/vehicle_config"
+
+    id: int
+    vehicle_id: int
+    display_name: str
