@@ -33,7 +33,7 @@ export const LoginForm: FC = () => {
       ['state', stableState],
     ].forEach((pair) => url.searchParams.set(pair[0], pair[1]));
 
-    alert(url.toString());
+    window.location.href = url.href
   };
 
   return (
